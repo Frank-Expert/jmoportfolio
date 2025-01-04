@@ -1,0 +1,595 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ece4e4;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fafbfd;
+    padding: 20px 0;  /* Increased padding for height */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect for reflection */
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    align-items: center; /* Vertically align the nav items */
+    padding: 0 20px;
+    height: 100%; /* Ensure it occupies full height */
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space out the nav items */
+}
+
+.nav-links a {
+    color: rgb(14, 12, 12);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: red; /* Change text color to red on hover */
+    border-radius: 4px;
+}
+
+/* Underline on hover */
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red; /* Red underline */
+}
+
+
+/* Section styling */
+.section {
+    display: none;   
+    margin-bottom: 50px;
+    
+}
+
+.section.active {
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Home Section */
+#home {
+    padding: 100px 0; /* Add space above and below the content */   
+    text-align: center; /* Center text */
+}
+
+#home .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading and Tagline Styling */
+#home h2 {
+    font-size: 4.5em;
+    color: #76adf5;
+    margin-bottom: 10px;
+}
+
+#home .tagline {
+    font-size: 1.6em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Centering the "GET IN TOUCH" button */
+#home .btn {
+    display: inline-block;
+    background-color: #0047ab;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+#home .btn:hover {
+    background-color: #003b8c;
+}
+
+
+
+
+
+/* Skills Summary Styling */
+.skills-summary {
+    display: flex;
+    justify-content: space-around; /* Distribute the items evenly in a row */
+    gap: 40px; /* Space between each skill item */
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Individual Skill Item Styling */
+.icon {
+    text-align: center;    
+    padding: 20px;
+    width: 30%; /* Make each item take up equal space */
+    transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Icon Size and Color */
+.icon i {
+    font-size: 100px; /* Icon size */
+    color: #FF6F61; /* Icon color */
+}
+
+/* Heading Styling */
+.icon h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Paragraph Styling */
+.icon p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+
+
+
+
+/* About Section Layout */
+/* About Me Section Layout */
+#about {
+    display: flex;
+    justify-content: space-between;  /* Space out the image and text */
+    align-items: center;  /* Vertically center the content */
+    width: 100%;  /* Full width of the section */
+    height: 50vh;  /* Set the height to 60% of the viewport height */    
+    margin-bottom: 50px;  /* Add some space below the section */
+    flex-wrap: wrap;  /* Allow content to wrap on smaller screens */
+}
+
+/* About Image */
+#about .about-image {
+    width: 50%;  /* Image container takes 50% of the width */
+    height: 100%;  /* Make the image container fill the entire height */
+    display: flex;  /* Make it a flex container */
+    justify-content: center;  /* Center the image horizontally */
+    align-items: center;  /* Center the image vertically */
+    overflow: hidden;  /* Hide any overflow */
+    background-color: #ffffff;  /* Light blue background */
+}
+
+#about .about-image-img {
+    width: 50%;  /* Make the image responsive */
+    height: 100%;  /* Ensure the image takes full height */
+    object-fit: cover;  /* Ensure the image covers the container without distortion */
+}
+
+/* About Text */
+#about .about-text {
+    width: 50%;  /* Text occupies 50% of the width */
+    height: 100%;
+    padding: 20px;  /* Add some padding to the text container */
+    background-color: #216ad1;  /* Dark blue background */
+    color: white;  /* White text color */
+    display: flex;  /* Make it a flex container */
+    flex-direction: column;  /* Arrange text vertically */
+    justify-content: center;  /* Vertically center the text */
+    text-align: center;  /* Center the text */
+}
+
+/* About Text Header */
+#about .about-text h3 {
+    font-size: 2.5em;  /* Larger font size for the title */
+    margin-bottom: 20px;  /* Space below the title */
+}
+
+/* About Text Paragraph */
+#about .about-text p {
+    font-size: 1.2em;  /* Slightly larger font for paragraphs */
+    line-height: 1.8;  /* Add spacing between lines */
+    margin-bottom: 10px;  /* Space below paragraphs */
+    color: white;  /* White color for text */
+    text-align: left;
+}
+
+
+
+
+
+/* Skills Section Layout */
+#skills {
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 100px 0; /* Add space above and below the content */
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusts grid items based on screen size */
+    gap: 30px;
+}
+
+.skill {
+    background-color: #fff;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.skill i {
+    font-size: 3rem;
+    color: #4a90e2; /* Icon color */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.skill i:hover {
+    color: #0066cc; /* Change color when hovering over icons */
+}
+
+.skill h3 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.skill p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+
+
+
+
+/* Projects section */
+/* Projects Section Layout */
+#projects {
+    background-color: #f0f4f8; /* Light grey background for a clean, professional feel */
+    padding: 100px 0; /* Add space above and below the content */
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Grid layout for projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.project {
+    background-color: #ffffff; /* White background for each project box */
+    border: 1px solid #e3e3e3; /* Border for separation */
+    border-radius: 12px; /* Rounded corners for a softer look */
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.project i {
+    font-size: 3rem;
+    color: #4a90e2; /* Icon color */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+
+.project h3 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.project p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0066cc;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+
+
+
+
+
+/* Contact form */
+/* Contact Section Layout */
+#contact {
+    background-color: #f9fafb; /* Light grey background */    
+    color: #333; /* Default text color */
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF; /* Blue border when focused */
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 120px; /* Set a minimum height for the textarea */
+}
+
+button {
+    padding: 15px;
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center text within the button */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure the button behaves like a block element */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+
+
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content styles */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Success Popup */
+.popup.success .popup-content {
+    background-color: #28a745; /* Green background for success */
+    color: #fff;
+}
+
+/* Error Popup */
+.popup.error .popup-content {
+    background-color: #dc3545; /* Red background for error */
+    color: #fff;
+}
+
+/* Close button */
+.close-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.close-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;  /* Remove default margin */
+}
+
+/* Container to keep content at the top and footer at the bottom */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure full viewport height */
+}
+
+/* Content section, will grow to fill available space */
+.content {
+    flex: 1;  /* Allow content to grow and take remaining space */
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center; /* Center align the text */
+    padding: 20px 0;
+    background-color: #ffffff; /* Dark background color */
+    border-top: 1px solid #d1cdcd; /* Light border on top */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1.2em; /* Increase font size for readability */
+}
+
+footer a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(209, 37, 37); /* Set text color to white */
+    font-weight: bold; /* Make the text bold */
+    display: inline-flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically align icon and text */
+    gap: 8px; /* Space between icon and text */
+    margin: 0 15px; /* Space between each icon */
+}
+
+footer a:hover {
+    color: #0a66c2; /* LinkedIn blue on hover */
+}
+
+footer i {
+    font-size: 1.5em; /* Size of the social media icons */
+}
+
+footer a:hover i {
+    color: #0a66c2; /* Change icon color on hover */
+}
+
+/* Container to keep icons in a row */
+footer .social-links {
+    display: flex;
+    justify-content: center; /* Center the icons in a row */
+    align-items: center; /* Vertically align icons */
+}
+

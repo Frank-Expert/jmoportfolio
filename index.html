@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Mark Oloo | Data Analyst & Consultant</title>
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    
+
+
+
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo"></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#skills" class="nav-link" onclick="navigateTo('skills')">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" onclick="navigateTo('projects')">My Projects</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <div class="main-container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <h2>John Mark Oloo</h2>
+                <p class="tagline">Consulting Analyst</p>
+                <p>Collect, process, analyse and present data – from supporting everyday business decisions to driving global change</p>
+                <a href="#contact" class="btn">GET IN TOUCH</a>                
+
+                
+                
+
+
+                <div class="skills-summary">
+                    <div class="icon">
+                        <i class="fas fa-pencil-alt"></i> <!-- Collect Icon -->
+                        <h3>Collect</h3>
+                        <p>Coming from a background in social psychology and social research, I have theoretical and practical knowledge in survey design and impact assessment. I have data collection and management experience with Kobo Toolbox, Qualtrics, Commcare, and Airtable.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-cogs"></i> <!-- Process Icon -->
+                        <h3>Process</h3>
+                        <p>As an Alteryx Designer Advanced Certified analyst, I can offer support on improving existing workflows and the creation of new processes, covering data transformation, unification, spatial and predictive analysis, and more.</p>
+                    </div>
+                    <div class="icon">                    
+                        <i class="fas fa-chart-bar"></i> <!-- Replace with a different chart icon -->
+                        <h3>Visualize</h3>
+                        <p>I am a Tableau Desktop Certified Professional with extensive knowledge of data visualization best practices. I have experience creating interactive tools and static infographics that can be consumed online or in print. Besides Tableau, I have worked primarily with Power BI and Flourish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section with Image and Text -->
+        <!-- About Me Section with Image and Text -->
+        <section id="about" class="section" style="display: none;">        
+            <div class="about-image">
+                <img src="images/jm.jpeg" alt="John Mark Oloo" class="about-image-img">
+            </div>
+            <div class="about-text">
+                <h3>About Me</h3>
+                <p>I am John Mark Oloo, a consulting data analyst and social researcher passionate about working with organisations that want to make effective use of their data; from the first ideas around what you want to measure and how to capture data accurately, through data preparation, analysis and management, all the way to impactful presentation of insights. I can support each step of the process to enable your organisation in making evidence-driven decisions or share insights with new audiences. I also offer training in Tableau and data visualisation best practices.</p>
+                <p>I am available for short-term projects and part-time longer-term engagements.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="display: none;">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form action="contact.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Popup Section -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p id="popup-message"></p>
+                <button id="close-popup" class="close-btn">Close</button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Skills Section -->
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Alteryx</h3>
+                        <p>Mastery in data preparation and automation tools like Alteryx, streamlining workflows to enhance productivity in data manipulation, transformation, and analytics.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Tableau</h3>
+                        <p>Advanced data visualization skills in Tableau, enabling users to create compelling and interactive dashboards and reports for insightful decision-making.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-search"></i>
+                        <h3>Data Analysis</h3>
+                        <p>Experienced in analyzing complex data sets, providing actionable insights to support strategic business decisions and operational improvements.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Career Coaching</h3>
+                        <p>Assisting individuals and teams in leveraging data skills for career development, guiding professionals through skill-building and industry trends.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Survey Design</h3>
+                        <p>Expert in survey design and evaluation, helping organizations collect accurate and meaningful data to assess impacts and drive decisions.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Proficient in web technologies such as HTML, CSS, and JavaScript to create data-driven web applications and interactive experiences for users.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>UNDP</h3>
+                        <p>An animated data story built with Flourish to present the findings of a UNDP climate report. This interactive visualisation aimed at informing global leaders about climate change challenges.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-procedures"></i>
+                        <h3>Operation Fistula</h3>
+                        <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper. The project provided essential insights into maternal health issues worldwide.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-equalizer"></i>
+                        <h3>Equal Measures 2030</h3>
+                        <p>A project for Equal Measures 2030 for the International Day of the Girl 2019. It focused on gender equality data and showcased the progress and challenges of achieving gender equality globally.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                    <div class="project">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Personal Project</h3>
+                        <p>Visualisation of complex data around policymakers’ knowledge on gender issues. This data visualisation project analyzed gaps in gender policies and informed future policy developments.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        
+
+        
+        <footer>
+            <div class="social-links">
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
