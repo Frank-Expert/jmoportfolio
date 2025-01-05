@@ -1,4 +1,3 @@
-// Handle section switching (SPA behavior)
 function navigateTo(target) {
     // Hide all sections first
     const sections = document.querySelectorAll('.section');
@@ -14,15 +13,20 @@ function navigateTo(target) {
         targetSection.style.display = 'block'; // Display the target section
     }
 
-    // Handle visibility of About Me and Contact sections
+    // Handle visibility of About Me, Contact, and Portfolio sections
     const aboutSection = document.getElementById('about');
     const contactSection = document.getElementById('contact');
+    const portfolioSection = document.getElementById('portfolio');
+    
     if (target === 'home') {
         if (aboutSection) {
             aboutSection.style.display = 'flex'; // Show About when Home is active
         }
         if (contactSection) {
             contactSection.style.display = 'block'; // Show Contact when Home is active
+        }
+        if (portfolioSection) {
+            portfolioSection.style.display = 'block'; // Show Portfolio when Home is active
         }
     } else {
         if (aboutSection) {
@@ -31,14 +35,16 @@ function navigateTo(target) {
         if (contactSection) {
             contactSection.style.display = 'none'; // Hide Contact for other sections
         }
+        if (portfolioSection) {
+            portfolioSection.style.display = 'none'; // Hide Portfolio for other sections
+        }
     }
 }
 
-// Initialize Home section (with About and Contact) as visible by default
+// Initialize Home section (with About, Contact, and Portfolio) as visible by default
 document.addEventListener('DOMContentLoaded', () => {
-    navigateTo('home'); // Ensure Home (with About and Contact) is the first section shown
+    navigateTo('home'); // Ensure Home (with About, Contact, and Portfolio) is the first section shown
 });
-
 
 //POP UP MESSAGE ON CONTACT FORM SECTION
 document.addEventListener('DOMContentLoaded', function() {
