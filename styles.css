@@ -194,7 +194,7 @@ header {
 /* Heading and Tagline Styling */
 #home h2 {
     font-size: 4.5em;
-    color: #76adf5;
+    color: #0b5fcc;
     margin-bottom: 10px;
 }
 
@@ -853,6 +853,7 @@ h2 {
     line-height: 1.6;
     color: #666;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .project-link {
