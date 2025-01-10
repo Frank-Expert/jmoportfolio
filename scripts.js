@@ -74,14 +74,100 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Function to toggle visibility of project details
+
+
+// Function to toggle project details (show or hide)
 function toggleDetails(projectId) {
-    var details = document.querySelector(`#${projectId} .project-details`);
-    
-    // Toggle visibility of the project details
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
+    const project = document.getElementById(projectId);
+    if (!project) {
+        console.error(`Project with ID ${projectId} not found!`);
+        return;
     }
+
+    const details = project.querySelector(".project-details");
+    const button = project.querySelector(".project-link");
+    const backdrop = document.querySelector(".project-details-backdrop");
+    const headerHeight = document.querySelector("header").offsetHeight; // Get header height
+    const footerHeight = document.querySelector("footer").offsetHeight; // Get footer height
+    const viewportHeight = window.innerHeight;
+
+    // If the details are currently hidden, show them
+    if (details.style.display === "none" || !details.style.display) {
+        // Show details
+        details.style.display = "block";
+        details.style.position = "fixed";
+        details.style.top = `${headerHeight + (viewportHeight - headerHeight - footerHeight) / 2}px`; // Center between header and footer
+        details.style.left = "50%"; // Center horizontally
+        details.style.transform = "translate(-50%, -50%)"; // True center horizontally
+        details.style.width = "80%"; // Occupy 80% of the viewport width
+        details.style.height = "auto"; // Adjust height dynamically
+        details.style.maxHeight = `${viewportHeight - headerHeight - footerHeight}px`; // Limit height to fit between header and footer
+        details.style.overflowY = "auto"; // Scroll if content exceeds available height
+        details.style.backgroundColor = "#fff"; // Background color
+        details.style.padding = "20px"; // Padding for content
+        details.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.3)"; // Shadow for focus
+        details.style.zIndex = "1000"; // Above other elements
+
+        // Show backdrop
+        backdrop.classList.add("active");
+
+        // Change button text to "Hide Project"
+        button.textContent = "Hide Project";
+    } else {
+        // If details are already shown, hide them
+        details.style.display = "none";
+
+        // Hide backdrop
+        backdrop.classList.remove("active");
+
+        // Change button text back to "View Project"
+        button.textContent = "View Project";
+    }
+}
+
+// Function to close details when clicking on the backdrop
+function closeDetails() {
+    const details = document.querySelectorAll(".project-details");
+    const backdrop = document.querySelector(".project-details-backdrop");
+
+    details.forEach(detail => (detail.style.display = "none"));
+    backdrop.classList.remove("active");
+}
+
+// Add event listeners for "View Project" links in Portfolio section
+document.querySelectorAll('.project-link').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor link behavior
+
+        // Get the target project ID from the link's href (this will match the project section's ID)
+        const targetId = this.getAttribute('href').substring(1); // Remove the '#' character
+
+        // Log the targetId for debugging
+        console.log(`Attempting to scroll to project with ID: ${targetId}`);
+
+        // Ensure the target element exists
+        const targetElement = document.querySelector(`#${targetId}`);
+        if (!targetElement) {
+            console.error(`No element found with ID "${targetId}"`);
+            return; // Exit if the target project doesn't exist
+        }
+
+        // Scroll to the project section (smooth scroll)
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+
+        // Wait a moment for the scroll to finish before showing the project details
+        setTimeout(() => {
+            toggleDetails(targetId);
+        }, 600); // Adjust timing if needed based on smooth scroll duration
+    });
+});
+
+// Add event listener to close project details when clicking on the backdrop
+document.querySelector('.project-details-backdrop').addEventListener('click', closeDetails);
+
+// Ensure the backdrop div is rendered once in the body (only 1 instance should exist).
+if (document.querySelectorAll('.project-details-backdrop').length === 0) {
+    const backdrop = document.createElement('div');
+    backdrop.classList.add('project-details-backdrop');
+    document.body.appendChild(backdrop);
 }

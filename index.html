@@ -31,6 +31,11 @@
         </div>
     </header>
 
+    <div class="project-details-backdrop" onclick="closeDetails()"></div>
+    <div class="project-details-backdrop"></div>
+
+
+
     <!-- Home Section -->
     <div class="main-container">
         <!-- Home Section -->
@@ -38,7 +43,7 @@
             <div class="container">
                 <h2>John Mark Oloo</h2>
                 <p class="tagline">Consulting Analyst</p>
-                <p>Collect, process, analyse and present data – from supporting everyday business decisions to driving global change</p>
+                <p>From everyday business decisions to driving global change - let’s work together to turn your data into a powerful tool for growth and innovation.</p>
                 <a href="#contact" class="btn">GET IN TOUCH</a>                
 
                 
@@ -97,39 +102,50 @@
 
         <!-- Portfolio Section -->
         <!-- Portfolio Section -->
-        <section id="portfolio" class="section" style="display: none;">
+        <section id="portfolio" class="section">
             <div class="container">
                 <h2>Portfolio</h2>
                 <p>A sample of my work</p>
 
-                <div class="projects-container">                   
-                    <!-- Portfolio Item -->
+                <div class="projects-container">
+                    <!-- Portfolio Item 1 -->
                     <div class="project">
                         <h3>CGA&D</h3>
                         <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
-                        <!-- Link to Projects page with the specific project ID -->
-                        <a href="projects.html#cgad" class="btn">Read More »</a>
-
+                        <a href="#cgad" class="project-link">View Project</a> <!-- Link to Projects section -->
                     </div>
 
+                    <!-- Portfolio Item 2 -->
                     <div class="project">
-                        <h3>Operation Fistula</h3>
-                        <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper.</p>
-                        <a href="projects.html#operation-fistula" class="btn">Read More »</a>
+                        <h3>Marketing Strategies</h3>
+                        <p>The Evolution and Application of Data Analysis in Marketing Strategies</p>
+                        <a href="#proj2-image" class="project-link">View Project</a> <!-- Link to Projects section -->
                     </div>
 
+                    <!-- Portfolio Item 3 -->
                     <div class="project">
-                        <h3>Equal Measures 2030</h3>
-                        <p>A project for the charity Equal Measures 2030 for the international day of the girl 2019.</p>
-                        <a href="projects.html#equal-measures" class="btn">Read More »</a>
+                        <h3>Climate Change</h3>
+                        <p>Correlation Does Not Imply Causation: A Study on Social Media Use and Confidence in Solving Climate Change.</p>
+                        <a href="#proj3-image" class="project-link">View Project</a> <!-- Link to Projects section -->
                     </div>
+
+                    <!-- Portfolio Item 4 -->
+                    <div class="project">
+                        <h3>Budget Controlling</h3>
+                        <p>A project for Budget Controlling.</p>
+                        <a href="#proj4-image" class="project-link">View Project</a> <!-- Link to Projects section -->
+                    </div>
+
                 </div>
 
                 <div class="projects-button">
-                    <a href="projects.html" class="btn-primary">See All Projects</a>
+                    <a href="#projects" class="btn-primary">See All Projects</a> <!-- Smooth scroll to Projects -->
                 </div>
             </div>
         </section>
+
+
+
 
         
 
@@ -235,44 +251,72 @@
                 <h2>My Projects</h2>
                 <div class="projects-grid">               
 
-                    <!-- Project Item -->
-                    <!-- Project Item -->
+                    <!-- Project Item 1 -->
                     <div id="cgad" class="project">
                         <h3>CGA&D</h3>
                         <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
                         <!-- Hidden Details -->
                         <div class="project-details" style="display: none;">
-                            <img src="projects/cgad.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad1.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad2.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad3.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad4.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
                             <p>This project focused on creating an interactive data dashboard and animated story for community analysis. Tools used include Flourish, Tableau, and Excel.</p>
                         </div>
                         <button class="project-link" onclick="toggleDetails('cgad')">View Project</button>
                     </div>
 
-                    <div id="operation-fistula" class="project">
-                        <h3>Operation Fistula</h3>
-                        <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper.</p>
+                    <!-- Project Item 2 -->
+                    <div id="proj2-image" class="project">
+                        <h3>Marketing Strategies</h3>
+                        <p>The Evolution and Application of Data Analysis in Marketing Strategies</p>
+                        <!-- Hidden Details -->
                         <div class="project-details" style="display: none;">
-                            <img src="projects/operation-fistula.png" alt="Operation Fistula" style="max-width: 100%; margin-top: 10px;">
-                            <p>This project visualizes estimates of obstetric fistula prevalence based on a research paper.</p>
-                            <a href="projects.html#operation-fistula" class="btn">View Full Project</a>
+                            <img src="projects/proj2-image1.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image2.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image3.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image4.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image5.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>The Evolution and Application of Data Analysis in Marketing Strategies.</p>
                         </div>
-                        <a href="projects.html#operation-fistula" class="project-link">View Project</a>
+                        <button class="project-link" onclick="toggleDetails('proj2-image')">View Project</button>
                     </div>
 
-                    <div id="equal-measures" class="project">
-                        <h3>Equal Measures 2030</h3>
-                        <p>A project for Equal Measures 2030 for the International Day of the Girl 2019.</p>
+                    <!-- Project Item 3 -->
+                    <div id="proj3-image" class="project">
+                        <h3>Climate Change</h3>
+                        <p>Correlation Does Not Imply Causation: A Study on Social Media Use and Confidence in Solving Climate Change.</p>
+                        <!-- Hidden Details -->
                         <div class="project-details" style="display: none;">
-                            <img src="projects/equal-measures.png" alt="Equal Measures 2030" style="max-width: 100%; margin-top: 10px;">
-                            <p>This project focuses on gender equality data and the challenges of achieving gender equality globally.</p>
-                            <a href="projects.html#equal-measures" class="btn">View Full Project</a>
+                            <img src="projects/proj3-image1.png" alt="Climate Change Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj3-image2.png" alt="Climate Change Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj3-image3.png" alt="Climate Change Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>Correlation Does Not Imply Causation: A Study on Social Media Use and Confidence in Solving Climate Change</p>
                         </div>
-                        <a href="projects.html#equal-measures" class="project-link">View Project</a>
+                        <button class="project-link" onclick="toggleDetails('proj3-image')">View Project</button>
                     </div>
+
+                    <!-- Project Item 4 -->
+                    <div id="proj4-image" class="project">
+                        <h3>Budget Controlling</h3>
+                        <p>A project for Budget Controlling.</p>
+                        <!-- Hidden Details -->
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/proj4-image1.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image2.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image3.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image4.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image5.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>This project focused on creating an interactive data dashboard and animated story for Budget Controlling. Tools used include Tableau, and Excel.</p>
+                        </div>
+                        <button class="project-link" onclick="toggleDetails('proj4-image')">View Project</button>
+                    </div>
+                    
 
                 </div>
             </div>
         </section>
+
 
 
         <!-- Contact Section -->
