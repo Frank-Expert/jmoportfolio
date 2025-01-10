@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Mark Oloo | Data Analyst & Consultant</title>
+    <link rel="stylesheet" href="styles.css"> <!-- General styles -->
+    <link rel="stylesheet" href="project.css"> <!-- Project-specific styles -->
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo"></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="projects.html" class="nav-link">My Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Project Details</h2>
+
+            <!-- Project Details: CGA&D -->
+            <div id="cgad" class="project" style="display: none;">
+                <h3>CGA&D</h3>
+                <img src="projects/cgad.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
+                <p>This project focused on creating an interactive data dashboard and animated story for community analysis. Tools used include Flourish, Tableau, and Excel.</p>
+                <a href="index.html" class="btn">Back to Portfolio</a>
+            </div>
+
+            <!-- Project Details: Operation Fistula -->
+            <div id="operation-fistula" class="project" style="display: none;">
+                <h3>Operation Fistula</h3>
+                <img src="projects/operation-fistula.png" alt="Operation Fistula" style="max-width: 100%; margin-top: 10px;">
+                <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper. The project provided essential insights into maternal health issues worldwide.</p>
+                <a href="index.html" class="btn">Back to Portfolio</a>
+            </div>
+
+            <!-- Project Details: Equal Measures 2030 -->
+            <div id="equal-measures" class="project" style="display: none;">
+                <h3>Equal Measures 2030</h3>
+                <img src="projects/equal-measures.png" alt="Equal Measures 2030" style="max-width: 100%; margin-top: 10px;">
+                <p>A project for Equal Measures 2030 for the International Day of the Girl 2019. It focused on gender equality data and showcased the progress and challenges of achieving gender equality globally.</p>
+                <a href="index.html" class="btn">Back to Portfolio</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/john-mark-oloo/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/OlooData" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+    <!-- JS to handle dynamic content -->
+    <script>
+        // Wait for the DOM to fully load
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the current hash in the URL (e.g., #cgad)
+            const projectHash = window.location.hash;
+
+            // If a project hash is found, show the corresponding project
+            if (projectHash) {
+                const project = document.querySelector(projectHash);
+
+                if (project) {
+                    // Show the project and ensure it's visible
+                    project.style.display = "block";
+                } else {
+                    // In case the hash is invalid, show all projects (you can also hide all if needed)
+                    document.querySelectorAll('.project').forEach(function(project) {
+                        project.style.display = "none"; // Hide all projects
+                    });
+                }
+            } else {
+                // If no hash is provided, hide all projects
+                document.querySelectorAll('.project').forEach(function(project) {
+                    project.style.display = "none"; // Hide all projects
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

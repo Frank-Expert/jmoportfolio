@@ -1,0 +1,47 @@
+/* project.css */
+
+/* Styles for the expanded project view */
+#project-view {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#project-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#project-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#project-details {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+#project-view img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+

@@ -74,3 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Function to toggle visibility of project details
+function toggleDetails(projectId) {
+    var details = document.querySelector(`#${projectId} .project-details`);
+    
+    // Toggle visibility of the project details
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}

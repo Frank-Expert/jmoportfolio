@@ -78,8 +78,17 @@
             </div>
             <div class="about-text">
                 <h3>About Me</h3>
-                <p>I am John Mark Oloo, a consulting data analyst and social researcher passionate about working with organisations that want to make effective use of their data; from the first ideas around what you want to measure and how to capture data accurately, through data preparation, analysis and management, all the way to impactful presentation of insights. I can support each step of the process to enable your organisation in making evidence-driven decisions or share insights with new audiences. I also offer training in Tableau and data visualisation best practices.</p>
-                <p>I am available for short-term projects and part-time longer-term engagements.</p>
+                    <p>I am John, a consulting data analyst and researcher, passionate about working 
+                        with organizations that want to make effective use of their data.</p>
+                    <p>I specialize in supporting every stage of the data journey—from defining the first ideas around 
+                        what you want to measure and designing systems on how to capture the data accurately, through dataset preparation, 
+                        analysis, and management, all the way to impactful presentation of insights. I can support each step of the process 
+                        to enable your organization in making evidence-driven decisions and effectively share insights with diverse audiences.</p>
+                    <p>I also offer training in Power BI, Tableau, and data visualization best practices, equipping teams 
+                        to use their data independently and for maximum impact. My approach is collaborative, adaptable, 
+                        and focused on delivering measurable results tailored to your goals.</p>
+                    <p>I am available for short-term projects and part-time, longer-term engagements.</p>
+
             </div>
         </section>
 
@@ -87,34 +96,41 @@
 
 
         <!-- Portfolio Section -->
+        <!-- Portfolio Section -->
         <section id="portfolio" class="section" style="display: none;">
             <div class="container">
                 <h2>Portfolio</h2>
                 <p>A sample of my work</p>
-        
-                <div class="projects-container">
+
+                <div class="projects-container">                   
+                    <!-- Portfolio Item -->
                     <div class="project">
-                        <h3>UNDP</h3>
-                        <p>An animated data story built with Flourish to present the findings of a UNDP climate report.</p>
-                        <a href="#" class="btn">Read More »</a>
+                        <h3>CGA&D</h3>
+                        <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
+                        <!-- Link to Projects page with the specific project ID -->
+                        <a href="projects.html#cgad" class="btn">Read More »</a>
+
                     </div>
+
                     <div class="project">
                         <h3>Operation Fistula</h3>
                         <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper.</p>
-                        <a href="#" class="btn">Read More »</a>
+                        <a href="projects.html#operation-fistula" class="btn">Read More »</a>
                     </div>
+
                     <div class="project">
                         <h3>Equal Measures 2030</h3>
                         <p>A project for the charity Equal Measures 2030 for the international day of the girl 2019.</p>
-                        <a href="#" class="btn">Read More »</a>
+                        <a href="projects.html#equal-measures" class="btn">Read More »</a>
                     </div>
                 </div>
-        
+
                 <div class="projects-button">
-                    <a href="#" class="btn-primary">See All Projects</a>
+                    <a href="projects.html" class="btn-primary">See All Projects</a>
                 </div>
             </div>
         </section>
+
         
 
 
@@ -217,31 +233,43 @@
         <section id="projects" class="section">
             <div class="container">
                 <h2>My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project">
-                        <i class="fas fa-globe-americas"></i>
-                        <h3>UNDP</h3>
-                        <p>An animated data story built with Flourish to present the findings of a UNDP climate report. This interactive visualisation aimed at informing global leaders about climate change challenges.</p>
-                        <a href="#" class="project-link">View Project</a>
+                <div class="projects-grid">               
+
+                    <!-- Project Item -->
+                    <!-- Project Item -->
+                    <div id="cgad" class="project">
+                        <h3>CGA&D</h3>
+                        <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
+                        <!-- Hidden Details -->
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/cgad.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>This project focused on creating an interactive data dashboard and animated story for community analysis. Tools used include Flourish, Tableau, and Excel.</p>
+                        </div>
+                        <button class="project-link" onclick="toggleDetails('cgad')">View Project</button>
                     </div>
-                    <div class="project">
-                        <i class="fas fa-procedures"></i>
+
+                    <div id="operation-fistula" class="project">
                         <h3>Operation Fistula</h3>
-                        <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper. The project provided essential insights into maternal health issues worldwide.</p>
-                        <a href="#" class="project-link">View Project</a>
+                        <p>Visualising estimates of obstetric fistula prevalence based on an academic research paper.</p>
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/operation-fistula.png" alt="Operation Fistula" style="max-width: 100%; margin-top: 10px;">
+                            <p>This project visualizes estimates of obstetric fistula prevalence based on a research paper.</p>
+                            <a href="projects.html#operation-fistula" class="btn">View Full Project</a>
+                        </div>
+                        <a href="projects.html#operation-fistula" class="project-link">View Project</a>
                     </div>
-                    <div class="project">
-                        <i class="fas fa-equalizer"></i>
+
+                    <div id="equal-measures" class="project">
                         <h3>Equal Measures 2030</h3>
-                        <p>A project for Equal Measures 2030 for the International Day of the Girl 2019. It focused on gender equality data and showcased the progress and challenges of achieving gender equality globally.</p>
-                        <a href="#" class="project-link">View Project</a>
+                        <p>A project for Equal Measures 2030 for the International Day of the Girl 2019.</p>
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/equal-measures.png" alt="Equal Measures 2030" style="max-width: 100%; margin-top: 10px;">
+                            <p>This project focuses on gender equality data and the challenges of achieving gender equality globally.</p>
+                            <a href="projects.html#equal-measures" class="btn">View Full Project</a>
+                        </div>
+                        <a href="projects.html#equal-measures" class="project-link">View Project</a>
                     </div>
-                    <div class="project">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Personal Project</h3>
-                        <p>Visualisation of complex data around policymakers’ knowledge on gender issues. This data visualisation project analyzed gaps in gender policies and informed future policy developments.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
+
                 </div>
             </div>
         </section>
