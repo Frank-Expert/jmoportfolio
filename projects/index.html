@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Mark Oloo | Data Analyst & Consultant</title>
+    <link rel="stylesheet" href="styles.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    
+
+
+
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo"></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#skills" class="nav-link" onclick="navigateTo('skills')">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" onclick="navigateTo('projects')">My Projects</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="project-details-backdrop" onclick="closeDetails()"></div>
+    <div class="project-details-backdrop"></div>
+
+
+
+    <!-- Home Section -->
+    <div class="main-container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <h2>John Mark Oloo</h2>
+                <p class="tagline">Consulting Analyst</p>
+                <p>From everyday business decisions to driving global change - let’s work together to turn your data into a powerful tool for growth and innovation.</p>
+                <a href="#contact" class="btn">GET IN TOUCH</a>                
+
+                
+                
+
+
+                <div class="skills-summary">
+                    <div class="icon">
+                        <i class="fas fa-pencil-alt"></i> <!-- Collect Icon -->
+                        <h3>Collect</h3>
+                        <p>Coming from a background in social psychology and social research, I have theoretical and practical knowledge in survey design and impact assessment. I have data collection and management experience with Kobo Toolbox, Qualtrics, Commcare, and Airtable.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-cogs"></i> <!-- Process Icon -->
+                        <h3>Process</h3>
+                        <p>As an Alteryx Designer Advanced Certified analyst, I can offer support on improving existing workflows and the creation of new processes, covering data transformation, unification, spatial and predictive analysis, and more.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-chart-line"></i> <!-- Analyze Icon -->
+                        <h3>Analyze</h3>
+                        <p>Using advanced analytics tools like Python, R, and Alteryx, I can uncover actionable insights from raw data. My experience includes predictive modeling, statistical analysis, and machine learning to support data-driven decision-making.</p>
+                    </div>
+                    <div class="icon">                    
+                        <i class="fas fa-chart-bar"></i> <!-- Replace with a different chart icon -->
+                        <h3>Visualize</h3>
+                        <p>I am a Tableau Desktop Certified Professional with extensive knowledge of data visualization best practices. I have experience creating interactive tools and static infographics that can be consumed online or in print. Besides Tableau, I have worked primarily with Power BI and Flourish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section with Image and Text -->
+        <!-- About Me Section with Image and Text -->
+        <section id="about" class="section" style="display: none;">        
+            <div class="about-image">
+                <img src="images/jm.jpeg" alt="John Mark Oloo" class="about-image-img">
+            </div>
+            <div class="about-text">
+                <h3>About Me</h3>
+                    <p>I am John, a consulting data analyst and researcher, passionate about working 
+                        with organizations that want to make effective use of their data.</p>
+                    <p>I specialize in supporting every stage of the data journey—from defining the first ideas around 
+                        what you want to measure and designing systems on how to capture the data accurately, through dataset preparation, 
+                        analysis, and management, all the way to impactful presentation of insights. I can support each step of the process 
+                        to enable your organization in making evidence-driven decisions and effectively share insights with diverse audiences.</p>
+                    <p>I also offer training in Power BI, Tableau, and data visualization best practices, equipping teams 
+                        to use their data independently and for maximum impact. My approach is collaborative, adaptable, 
+                        and focused on delivering measurable results tailored to your goals.</p>
+                    <p>I am available for short-term projects and part-time, longer-term engagements.</p>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- Portfolio Section -->
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2>Portfolio</h2>
+                <p>A sample of my work</p>
+
+                <div class="projects-container">
+                    <!-- Portfolio Item 1 -->
+                    <div class="project">
+                        <h3>CGA&D</h3>
+                        <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
+                        <a href="#cgad" class="project-link">View Project</a> <!-- Link to Projects section -->
+                    </div>
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="project">
+                        <h3>Marketing Strategies</h3>
+                        <p>The Evolution and Application of Data Analysis in Marketing Strategies</p>
+                        <a href="#proj2-image" class="project-link">View Project</a> <!-- Link to Projects section -->
+                    </div>
+
+                    <!-- Portfolio Item 3 -->
+                    <div class="project">
+                        <h3>Climate Change</h3>
+                        <p>Correlation Does Not Imply Causation: A Study on Social Media Use and Confidence in Solving Climate Change.</p>
+                        <a href="#proj3-image" class="project-link">View Project</a> <!-- Link to Projects section -->
+                    </div>
+
+                    <!-- Portfolio Item 4 -->
+                    <div class="project">
+                        <h3>Budget Controlling</h3>
+                        <p>A project for Budget Controlling.</p>
+                        <a href="#proj4-image" class="project-link">View Project</a> <!-- Link to Projects section -->
+                    </div>
+
+                </div>
+
+                <div class="projects-button">
+                    <a href="#projects" class="btn-primary">See All Projects</a> <!-- Smooth scroll to Projects -->
+                </div>
+            </div>
+        </section>
+
+
+
+
+        
+
+
+        
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="display: none;">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form action="contact.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Popup Section -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <p id="popup-message"></p>
+                <button id="close-popup" class="close-btn">Close</button>
+            </div>
+        </div>
+
+
+
+
+
+        
+
+
+
+
+        <!-- Skills Section -->
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <i class="fas fa-chart-bar"></i> <!-- Power BI & Tableau -->
+                        <h3>Power BI & Tableau</h3>
+                        <p>Advanced expertise in Power BI and Tableau for transforming raw data into actionable insights with compelling visuals and interactive dashboards.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-database"></i> <!-- R, SQL & Google Sheets -->
+                        <h3>R, SQL & Google Sheets</h3>
+                        <p>Proficient in data analysis using R, SQL, and Google Sheets to manipulate, analyze, and visualize data for business intelligence.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-pencil-alt"></i> <!-- Survey Design -->
+                        <h3>Survey Design</h3>
+                        <p>Specialized in crafting well-structured surveys and designing assessments to collect valuable, reliable data for actionable insights.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-chart-line"></i> <!-- Business / Market Insights -->
+                        <h3>Business / Market Insights</h3>
+                        <p>In-depth understanding of market trends and business performance, leveraging data to provide insights that drive strategic decisions.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-cogs"></i> <!-- Alteryx -->
+                        <h3>Alteryx</h3>
+                        <p>Expert in data automation and process improvement with Alteryx, enabling businesses to streamline workflows and transform data efficiently.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-calendar-check"></i> <!-- Demand and Supply Planning / Forecasting -->
+                        <h3>Demand & Supply Planning / Forecasting</h3>
+                        <p>Skilled in forecasting trends and managing demand and supply processes, helping organizations optimize their operations and minimize costs.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-robot"></i> <!-- Sales Automation -->
+                        <h3>Sales Automation</h3>
+                        <p>Experience in automating sales processes to increase productivity, streamline customer interactions, and drive revenue growth.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-server"></i> <!-- Database Management -->
+                        <h3>Database Management</h3>
+                        <p>Managing and optimizing databases to ensure data integrity, security, and availability for all business operations.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-laptop-code"></i> <!-- Web Development -->
+                        <h3>Web Development</h3>
+                        <p>Proficient in front-end web development (HTML, CSS, JavaScript) for creating interactive, user-friendly websites and web applications.</p>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-search"></i> <!-- Monitoring & Evaluation -->
+                        <h3>Monitoring & Evaluation</h3>
+                        <p>Expert in assessing and evaluating data and processes, ensuring that projects and interventions achieve their intended outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Projects Section -->
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">               
+
+                    <!-- Project Item 1 -->
+                    <div id="cgad" class="project">
+                        <h3>CGA&D</h3>
+                        <p>An animated data story built with Flourish to present the findings of a Community graduands analysis and dashboard report.</p>
+                        <!-- Hidden Details -->
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/cgad1.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad2.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad3.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/cgad4.png" alt="CGA&D Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>This project focused on creating an interactive data dashboard and animated story for community analysis. Tools used include Flourish, Tableau, and Excel.</p>
+                        </div>
+                        <button class="project-link" onclick="toggleDetails('cgad')">View Project</button>
+                    </div>
+
+                    <!-- Project Item 2 -->
+                    <div id="proj2-image" class="project">
+                        <h3>Marketing Strategies</h3>
+                        <p>The Evolution and Application of Data Analysis in Marketing Strategies</p>
+                        <!-- Hidden Details -->
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/proj2-image1.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image2.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image3.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image4.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj2-image5.png" alt="Marketing Strategies Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>The Evolution and Application of Data Analysis in Marketing Strategies.</p>
+                        </div>
+                        <button class="project-link" onclick="toggleDetails('proj2-image')">View Project</button>
+                    </div>
+
+                    <!-- Project Item 3 -->
+                    <div id="proj3-image" class="project">
+                        <h3>Climate Change</h3>
+                        <p>Correlation Does Not Imply Causation: A Study on Social Media Use and Confidence in Solving Climate Change.</p>
+                        <!-- Hidden Details -->
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/proj3-image1.png" alt="Climate Change Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj3-image2.png" alt="Climate Change Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj3-image3.png" alt="Climate Change Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>Correlation Does Not Imply Causation: A Study on Social Media Use and Confidence in Solving Climate Change</p>
+                        </div>
+                        <button class="project-link" onclick="toggleDetails('proj3-image')">View Project</button>
+                    </div>
+
+                    <!-- Project Item 4 -->
+                    <div id="proj4-image" class="project">
+                        <h3>Budget Controlling</h3>
+                        <p>A project for Budget Controlling.</p>
+                        <!-- Hidden Details -->
+                        <div class="project-details" style="display: none;">
+                            <img src="projects/proj4-image1.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image2.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image3.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image4.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <img src="projects/proj4-image5.png" alt="Budget Controlling Project" style="max-width: 100%; margin-top: 10px;">
+                            <p>This project focused on creating an interactive data dashboard and animated story for Budget Controlling. Tools used include Tableau, and Excel.</p>
+                        </div>
+                        <button class="project-link" onclick="toggleDetails('proj4-image')">View Project</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        
+
+        
+        <footer>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/john-mark-oloo/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/OlooData" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </footer>
+
+    </div>
+    
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
