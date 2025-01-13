@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Function to toggle project details (show or hide)
+// Function to toggle project details (show or hide)
 function toggleDetails(projectId) {
     const project = document.getElementById(projectId);
     if (!project) {
@@ -87,8 +88,8 @@ function toggleDetails(projectId) {
     const details = project.querySelector(".project-details");
     const button = project.querySelector(".project-link");
     const backdrop = document.querySelector(".project-details-backdrop");
-    const headerHeight = document.querySelector("header").offsetHeight; // Get header height
-    const footerHeight = document.querySelector("footer").offsetHeight; // Get footer height
+    const headerHeight = document.querySelector("header").offsetHeight || 0; // Get header height
+    const footerHeight = document.querySelector("footer")?.offsetHeight || 0; // Get footer height
     const viewportHeight = window.innerHeight;
 
     // If the details are currently hidden, show them
@@ -96,11 +97,10 @@ function toggleDetails(projectId) {
         // Show details
         details.style.display = "block";
         details.style.position = "fixed";
-        details.style.top = `${headerHeight + (viewportHeight - headerHeight - footerHeight) / 2}px`; // Center between header and footer
+        details.style.top = `${headerHeight}px`; // Position immediately below the header
         details.style.left = "50%"; // Center horizontally
-        details.style.transform = "translate(-50%, -50%)"; // True center horizontally
+        details.style.transform = "translateX(-50%)"; // True center horizontally
         details.style.width = "80%"; // Occupy 80% of the viewport width
-        details.style.height = "auto"; // Adjust height dynamically
         details.style.maxHeight = `${viewportHeight - headerHeight - footerHeight}px`; // Limit height to fit between header and footer
         details.style.overflowY = "auto"; // Scroll if content exceeds available height
         details.style.backgroundColor = "#fff"; // Background color
@@ -171,3 +171,11 @@ if (document.querySelectorAll('.project-details-backdrop').length === 0) {
     backdrop.classList.add('project-details-backdrop');
     document.body.appendChild(backdrop);
 }
+
+
+
+
+
+
+
+
