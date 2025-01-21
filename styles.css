@@ -1,0 +1,1017 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ece4e4;
+    background-color: #f4f4f9;
+    font-weight: 400;
+}
+
+/* Header */
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fafbfd;
+    padding: 20px 0;  /* Increased padding for height */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow effect for reflection */
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    align-items: center; /* Vertically align the nav items */
+    padding: 0 20px;
+    height: 100%; /* Ensure it occupies full height */
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space out the nav items */
+}
+
+.nav-links a {
+    color: rgb(14, 12, 12);
+    text-decoration: none;
+    font-size: 28px;
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: red; /* Change text color to red on hover */
+    border-radius: 4px;
+}
+
+/* Underline on hover */
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red; /* Red underline */
+}
+
+
+
+
+
+
+/* Media Queries */
+
+/* For screens 200px and below - Columns layout */
+@media (max-width: 200px) {
+    .navbar {
+        flex-direction: column;  /* Stack navbar items vertically */
+    }
+
+    .nav-links {
+        flex-direction: column;  /* Stack nav items vertically */
+        align-items: center;  /* Center align the nav items */
+    }
+
+    .nav-links li {
+        margin: 4px 0;  /* Adjust margin for small screens */
+    }
+
+    .nav-links a {
+        font-size: 16px;  /* Reduce font size for very small screens */
+        padding: 4px;  /* Adjust padding for very small screens */
+    }
+}
+
+/* For medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;  /* Reduced padding for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: row;  /* Keep the navbar in a row layout */
+        padding: 0 10px;  /* Reduced padding */
+    }
+
+    .nav-links {
+        flex-direction: row;  /* Keep nav items in a row */
+        align-items: center;  /* Center align the nav items */
+    }
+
+    .nav-links li {
+        margin: 10px 0;  /* Adjust margin for vertical layout */
+    }
+
+    .nav-links a {
+        font-size: 24px;  /* Smaller font size for tablet */
+        padding: 8px;  /* Reduced padding */
+    }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;  /* Further reduced padding for mobile */
+    }
+
+    .navbar {
+        padding: 0 5px;  /* Further reduced padding */
+    }
+
+    .nav-links {
+        flex-direction: row;  /* Keep nav items in a row */
+        align-items: center;  /* Center align the nav items */
+    }
+
+    .nav-links li {
+        margin: 8px 0;  /* Adjust margin for mobile */
+    }
+
+    .nav-links a {
+        font-size: 20px;  /* Reduce font size for mobile */
+        padding: 6px;  /* Reduced padding for mobile */
+    }
+}
+
+
+
+
+
+
+
+
+/* Section styling */
+.section {
+    display: none;   
+    margin-bottom: 50px;
+    
+}
+
+.section.active {
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+/* Home Section */
+#home {
+    padding: 100px 0; /* Add space above and below the content */   
+    text-align: center; /* Center text */
+}
+
+#home .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading and Tagline Styling */
+#home h2 {
+    font-size: 4.5em;
+    color: #0b5fcc;
+    margin-bottom: 10px;
+}
+
+#home .tagline {
+    font-size: 2em;
+    color: #1a1717;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#home p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Centering the "GET IN TOUCH" button */
+#home .btn {
+    display: inline-block;
+    background-color: #0047ab;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+#home .btn:hover {
+    background-color: #003b8c;
+}
+
+
+
+
+
+
+/* Media Queries */
+
+/* For screens smaller than 768px (tablets) */
+@media (max-width: 768px) {
+    
+    #home h2 {
+        font-size: 3.5em;  /* Reduced font size for the heading */
+    }
+
+    #home .tagline {
+        font-size: 1.4em;  /* Reduced font size for tagline */
+    }
+
+    #home p {
+        font-size: 1.1em;  /* Reduced font size for paragraphs */
+    }
+
+    #home .btn {
+        font-size: 1.1em;  /* Smaller button font size */
+        padding: 10px 25px;  /* Adjusted button padding */
+    }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+    
+
+    #home h2 {
+        font-size: 2.5em;  /* Further reduced font size for heading */
+    }
+
+    #home .tagline {
+        font-size: 1.3em;  /* Further reduced font size for tagline */
+    }
+
+    #home p {
+        font-size: 1em;  /* Reduced font size for paragraph text */
+    }
+
+    #home .btn {
+        font-size: 1em;  /* Further reduced button font size */
+        padding: 8px 20px;  /* Adjusted button padding for mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Skills Summary Styling */
+.skills-summary {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    gap: 20px; /* Space between each skill item */
+    margin-top: 40px;
+    justify-content: space-between; /* Evenly spaced items */
+}
+
+/* Individual Skill Item Styling */
+.icon {
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    transition: box-shadow 0.3s ease; /* Smooth transition on hover */
+    flex: 1 1 23%; /* Allow 3 items to fit per row by default, with a bit of gap */
+    min-width: 250px; /* Prevent shrinking too much on small screens */
+}
+
+/* Icon Size and Color */
+.icon i {
+    font-size: 100px; /* Icon size */
+    color: #FF6F61; /* Icon color */
+}
+
+/* Heading Styling */
+.icon h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Paragraph Styling */
+.skills-summary .icon p {
+    text-align: left; /* Aligns the text to the left */
+    margin: 0;
+    line-height: 1.5; /* Improves readability */
+    word-wrap: break-word; /* Prevents overflow for long words */
+    overflow-wrap: break-word; /* Ensures long words don't break layout */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .icon {
+        flex: 1 1 48%; /* 2 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .icon {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+}
+
+
+
+
+
+
+/* About Section Layout */
+/* About Me Section Layout */
+#about {
+    display: flex;
+    justify-content: space-between;  /* Space out the image and text */
+    align-items: center;  /* Vertically center the content */
+    width: 100%;  /* Full width of the section */
+    height: 60vh;  /* Set the height to 60% of the viewport height */    
+    margin-bottom: 50px;  /* Add some space below the section */
+    flex-wrap: wrap;  /* Allow content to wrap on smaller screens */
+    align-items: stretch;  /* Stretch both image and text to the same height */
+}
+
+/* About Image */
+#about .about-image {
+    width: 50%;  /* Image container takes 50% of the width */
+    height: auto;  /* Make the image container fill the entire height */
+    display: flex;  /* Make it a flex container */
+    justify-content: center;  /* Center the image horizontally */
+    align-items: center;  /* Center the image vertically */
+    overflow: hidden;  /* Hide any overflow */
+    background-color: #ffffff;  /* Light blue background */
+}
+
+#about .about-image-img {
+    width: 60%;  /* Make the image responsive */
+    height: auto;  /* Ensure the image takes full height */
+    object-fit: cover;  /* Ensure the image covers the container without distortion */
+}
+
+/* About Text */
+#about .about-text {
+    width: 50%;  /* Text occupies 50% of the width */
+    height: auto;  /* Allow text to take full height */
+    padding: 20px;  /* Add some padding to the text container */
+    background-color: #216ad1;  /* Dark blue background */
+    color: white;  /* White text color */
+    display: flex;  /* Make it a flex container */
+    flex-direction: column;  /* Arrange text vertically */
+    justify-content: center;  /* Vertically center the text */
+    text-align: center;  /* Center the text */
+}
+
+/* About Text Header */
+#about .about-text h3 {
+    font-size: 2.0em;  /* Larger font size for the title */
+    margin-bottom: 20px;  /* Space below the title */
+}
+
+/* About Text Paragraph */
+#about .about-text p {
+    font-size: 1em;  /* Slightly larger font for paragraphs */
+    line-height: 1.8;  /* Add spacing between lines */
+    margin-bottom: 10px;  /* Space below paragraphs */
+    color: white;  /* White color for text */
+    text-align: left;
+}
+
+
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* When the screen size is less than 768px */
+    #about {
+        flex-direction: column;  /* Stack the content vertically */
+        height: auto;  /* Allow content to adjust its height */
+    }
+
+    #about .about-image, #about .about-text {
+        width: 100%;  /* Both image and text take 100% width */
+        height: auto;  /* Allow the height to adjust based on content */
+    }
+
+    #about .about-text p {
+        font-size: 1em;  /* Adjust font size for smaller screens */
+        line-height: 1.6;  /* Adjust line height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* When the screen size is less than 480px */
+    #about .about-text h3 {
+        font-size: 1.8em;  /* Adjust header size for smaller screens */
+    }
+
+    #about .about-text p {
+        font-size: 0.9em;  /* Adjust paragraph font size for very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Portfolio Section */
+#portfolio {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+#portfolio h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    color: #ca1010;
+}
+
+#portfolio p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+    color: #666;
+}
+
+/* Projects Container */
+#portfolio .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust based on screen size */
+    gap: 20px; /* Spacing between items */
+    align-items: stretch; /* Ensure all items align properly */
+    justify-content: center; /* Center the items within the container */
+}
+
+/* Individual Project */
+#portfolio .project {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+#portfolio .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio .project h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+#portfolio .project p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: left;
+}
+
+/* Read More Button */
+#portfolio .project .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#portfolio .project .btn:hover {
+    background-color: #0056b3;
+}
+
+/* See All Projects Button */
+#portfolio .projects-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#portfolio .projects-button .btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#portfolio .projects-button .btn:hover {
+    background-color: #885b21;
+}
+
+
+/* Center the "See All Projects" button */
+#portfolio .btn {
+    display: block;
+    margin: 20px auto; /* This centers the button horizontally */
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    width: 200px; /* Button width */
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center; /* Ensures the text is centered inside the button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#portfolio .btn:hover {
+    background-color: #0056b3; /* Darken background on hover */
+}
+
+#portfolio .btn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+
+
+/* Media Queries for Smaller Screens */
+
+/* Medium screens (tablets, 768px and below) */
+@media (max-width: 768px) {
+    #portfolio h2 {
+        font-size: 2.8rem;  /* Smaller heading for tablet screens */
+    }
+
+    #portfolio p {
+        font-size: 1.3rem;  /* Slightly smaller paragraph text */
+    }
+
+    #portfolio .project h3 {
+        font-size: 1.4rem;  /* Smaller project title */
+    }
+
+    #portfolio .project p {
+        font-size: 1.1rem;  /* Slightly smaller project description */
+    }
+}
+
+/* Small screens (mobile devices, 480px and below) */
+@media (max-width: 480px) {
+    #portfolio h2 {
+        font-size: 2.2rem;  /* Even smaller heading for mobile screens */
+    }
+
+    #portfolio p {
+        font-size: 1.1rem;  /* Adjust paragraph text size for mobile */
+    }
+
+    #portfolio .project h3 {
+        font-size: 1.2rem;  /* Smaller project title on mobile */
+    }
+
+    #portfolio .project p {
+        font-size: 1rem;  /* Adjust paragraph font size for mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact form */
+/* Contact Section Layout */
+#contact {
+    background-color: #f9fafb; /* Light grey background */    
+    color: #333; /* Default text color */
+    padding: 50px 0; /* Add space above and below the content */
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd; /* Light border */
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF; /* Blue border when focused */
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 250px; /* Set a minimum height for the textarea */
+}
+
+button {
+    padding: 15px;
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center text within the button */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure the button behaves like a block element */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup content styles */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Success Popup */
+.popup.success .popup-content {
+    background-color: #28a745; /* Green background for success */
+    color: #fff;
+}
+
+/* Error Popup */
+.popup.error .popup-content {
+    background-color: #dc3545; /* Red background for error */
+    color: #fff;
+}
+
+/* Close button */
+.close-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.close-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/* Skills Section Layout */
+#skills {
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 100px 0; /* Add space above and below the content */
+}
+
+
+#skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusts grid items based on screen size */
+    gap: 30px;
+}
+
+.skill {
+    background-color: #fff;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.skill i {
+    font-size: 3rem;
+    color: #4a90e2; /* Icon color */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.skill i:hover {
+    color: #0066cc; /* Change color when hovering over icons */
+}
+
+.skill h3 {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.skill p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+
+
+
+
+
+
+/* Projects section */
+/* Projects Section Layout */
+#projects {
+    background-color: #f0f4f8; /* Light grey background for a clean, professional feel */
+    padding: 100px 0; /* Add space above and below the content */
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Grid layout for projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.project {
+    background-color: #ffffff; /* White background for each project box */
+    border: 1px solid #e3e3e3; /* Border for separation */
+    border-radius: 12px; /* Rounded corners for a softer look */
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.project i {
+    font-size: 3rem;
+    color: #4a90e2; /* Icon color */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+
+.project h3 {
+    font-size: 1.4rem;
+    margin: 20px 0;
+    color: #333;    
+}
+
+.project p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-link {
+    display: inline-block;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #0e6cf0;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #0066cc;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #58d3c26b;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* One column on very small screens */
+    }
+}
+
+
+
+/* CSS for the project container */
+.project-details {
+    display: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0; /* Initially hidden */
+}
+
+.project-details[style*="block"] {
+    opacity: 1; /* Visible when shown */
+}
+
+/* Backdrop for dimming background */
+.project-details-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Below the project details */
+    display: none; /* Hidden by default */
+}
+
+.project-details-backdrop.active {
+    display: block; /* Show backdrop when active */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+html, body {
+    scroll-behavior: smooth; /* For smooth scrolling */
+    overflow: auto; /* Ensure scrolling is enabled */
+}
+
+
+
+
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;  /* Remove default margin */
+}
+
+/* Container to keep content at the top and footer at the bottom */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure full viewport height */
+}
+
+/* Content section, will grow to fill available space */
+.content {
+    flex: 1;  /* Allow content to grow and take remaining space */
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center; /* Center align the text */
+    padding: 20px 0;
+    background-color: #ffffff; /* Dark background color */
+    border-top: 1px solid #d1cdcd; /* Light border on top */
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1.2em; /* Increase font size for readability */
+}
+
+footer a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(209, 37, 37); /* Set text color to white */
+    font-weight: bold; /* Make the text bold */
+    display: inline-flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically align icon and text */
+    gap: 8px; /* Space between icon and text */
+    margin: 0 15px; /* Space between each icon */
+}
+
+footer a:hover {
+    color: #0a66c2; /* LinkedIn blue on hover */
+}
+
+footer i {
+    font-size: 1.5em; /* Size of the social media icons */
+}
+
+footer a:hover i {
+    color: #0a66c2; /* Change icon color on hover */
+}
+
+/* Container to keep icons in a row */
+footer .social-links {
+    display: flex;
+    justify-content: center; /* Center the icons in a row */
+    align-items: center; /* Vertically align icons */
+}
+
