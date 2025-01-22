@@ -828,7 +828,25 @@ button:focus {
 #projects {
     background-color: #f0f4f8; /* Light grey background for a clean, professional feel */
     padding: 100px 0; /* Add space above and below the content */
+    
+    
 }
+
+.project {
+    background-color: #ffffff; /* White background for each project box */
+    border: 1px solid #e3e3e3; /* Border for separation */
+    border-radius: 12px; /* Rounded corners for a softer look */
+    padding: 30px;
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Flexbox Properties */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Start content from the top */
+    height: 100%; /* Ensure all project boxes are equal height */
+}
+
 
 
 h2 {
@@ -889,7 +907,9 @@ h2 {
     border: 2px solid #0066cc;
     border-radius: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: auto; /* Push the button to the bottom */
 }
+
 
 .project-link:hover {
     background-color: #58d3c26b;
@@ -936,6 +956,12 @@ h2 {
 .project-details-backdrop.active {
     display: block; /* Show backdrop when active */
 }
+
+
+
+
+
+
 
 html {
     scroll-behavior: smooth;
